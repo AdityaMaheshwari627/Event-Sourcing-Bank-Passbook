@@ -1,0 +1,29 @@
+{
+  "name": "event-sourcing-bank-passbook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdityaMaheshwari627/Event-Sourcing-Bank-Passbook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AdityaMaheshwari627/Event-Sourcing-Bank-Passbook/issues"
+  },
+  "homepage": "https://github.com/AdityaMaheshwari627/Event-Sourcing-Bank-Passbook#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
