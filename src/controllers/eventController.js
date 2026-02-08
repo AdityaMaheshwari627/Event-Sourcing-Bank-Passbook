@@ -39,3 +39,25 @@ exports.withdraw = async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 };
+
+const replayService =  require('../services/replayService');
+
+// Get Current Balance
+exports.getBalance = async (req, res) => {
+    try {
+        const balance = await replayService.getbalance();
+        res.json({ balance});
+    } catch (err) {
+        res.status(500).json({ error: err.message});
+    }
+};
+
+// Get Passbook (All Events)
+exports.getPassbook = async (req, res) => {
+    try {
+        const events = await replayService.getPassbook();
+        res.json({ events});
+    } catch (err) {
+        res.status(500).json({error: err.message});
+    };
+};

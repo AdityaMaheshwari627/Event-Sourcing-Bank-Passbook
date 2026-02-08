@@ -6,3 +6,6 @@ router.post("/deposit", controller.deposit);
 router.post("/withdraw", controller.withdraw);
 
 module.exports = router;
+
+router.get("/balance", controller.getBalance);
+router.get("/passbook", controller.getPassbook);
