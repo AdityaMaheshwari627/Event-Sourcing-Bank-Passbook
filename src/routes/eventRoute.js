@@ -9,3 +9,5 @@ module.exports = router;
 
 router.get("/balance", controller.getBalance);
 router.get("/passbook", controller.getPassbook);
+
+router.post("/snapshot", controller.createSnapshot);
