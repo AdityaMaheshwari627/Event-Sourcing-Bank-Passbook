@@ -17,7 +17,10 @@ exports.deposit = async (req, res) => {
     });
 
     await event.save();
-    res.status(201).json({ message: "Deposit event stored", event });
+    res.status(201).json({
+      message: "Deposit event stored",
+      event 
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -30,6 +33,14 @@ exports.withdraw = async (req, res) => {
 
     if (!amount || amount <= 0) {
       return res.status(400).json({ error: "Amount must be greater than 0" });
+    }
+
+    // Check for sufficient balance
+    const currentBalance = await replayService.getbalance();
+    if (amount > currentBalance) {
+      return res.status(400).json({
+        error: "Insufficient balance"
+      });
     }
 
     const event = new Event({
@@ -68,7 +79,10 @@ exports.getPassbook = async (req, res) => {
 exports.createSnapshot = async (req, res) => {
   try {
     const snap = await snapshotService.createSnapshot();
-    res.json({ message: "Snapshot created", snap });
+    res.json({
+      message: "Snapshot created successfully",
+      snapshot: snap
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
