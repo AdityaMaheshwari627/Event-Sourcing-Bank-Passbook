@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/AdityaMaheshwari627/Event-Sourcing-Bank-Passbook#readme",
   "dependencies": {
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "mongoose": "^9.1.6"
   },
