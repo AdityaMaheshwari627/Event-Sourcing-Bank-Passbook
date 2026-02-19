@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -11,7 +12,7 @@ app.get("/", (req, res) => {
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://127.0.0.1:27017/event_sourcing_db")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("MongoDB Error:", err));
 
@@ -20,9 +21,7 @@ const eventRoutes = require("./routes/eventRoute");
 app.use("/api/events", eventRoutes);
 
 // Server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-require("dotenv").config();
