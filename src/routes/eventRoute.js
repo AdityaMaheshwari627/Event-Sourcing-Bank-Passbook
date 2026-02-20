@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const controller = require("../controllers/eventController");
 
+// Event Routes
 router.post("/deposit", controller.deposit);
 router.post("/withdraw", controller.withdraw);
 
