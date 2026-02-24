@@ -1,6 +1,7 @@
 const Snapshot = require("../models/snapshotModel");
 const Event = require("../models/eventModel");
 
+// Snapshot Service
 exports.createSnapshot = async () => {
     const events = await Event.find().sort({ timestamp: 1});
     let balance = 0;
