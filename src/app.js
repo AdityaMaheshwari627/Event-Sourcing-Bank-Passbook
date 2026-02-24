@@ -27,3 +27,5 @@ app.listen(PORT, () => {
 });
 
 // Error Handling Middleware
+const errorHandler = require("./middleware/errorhandler");
+app.use(errorHandler);
