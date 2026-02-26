@@ -20,6 +20,7 @@ exports.createSnapshot = async () => {
     return snapshot;
 };
 
+// Get the latest snapshot
 exports.getLatestSnapshot = async () => {
     return await Snapshot.findOne().sort({ lastEventTime: -1});
 };
