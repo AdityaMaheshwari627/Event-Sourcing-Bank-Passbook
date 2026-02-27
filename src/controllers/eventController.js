@@ -73,7 +73,7 @@ exports.getPassbook = async (req, res) => {
   }
 };
 
-// Create Snapshot
+//Create Snapshot
 exports.createSnapshot = async (req, res) => {
   try {
     const snap = await snapshotService.createSnapshot();
