@@ -63,7 +63,7 @@ exports.getBalance = async (req, res) => {
   }
 };
 
-// Get Passbook (All Events)
+//Get Passbook (All Events)
 exports.getPassbook = async (req, res) => {
   try {
     const events = await replayService.getPassbook();
