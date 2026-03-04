@@ -53,7 +53,7 @@ exports.withdraw = async (req, res) => {
   }
 };
 
-// Get Current Balance
+//Get Current Balance
 exports.getBalance = async (req, res) => {
   try {
     const balance = await replayService.getBalance();
