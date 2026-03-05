@@ -53,7 +53,7 @@ exports.withdraw = async (req, res) => {
   }
 };
 
-//Get Current Balance
+// Get Current Balance
 exports.getBalance = async (req, res) => {
   try {
     const balance = await replayService.getBalance();
@@ -63,7 +63,7 @@ exports.getBalance = async (req, res) => {
   }
 };
 
-//Get Passbook (All Events)
+// Get Passbook (All Events)
 exports.getPassbook = async (req, res) => {
   try {
     const events = await replayService.getPassbook();
