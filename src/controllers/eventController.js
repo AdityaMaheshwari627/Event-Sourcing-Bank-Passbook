@@ -35,7 +35,7 @@ exports.withdraw = async (req, res) => {
       return res.status(400).json({ error: "Invalid Withdraw amount" });
     }
 
-    //Check for sufficient balance
+    // Check for sufficient balance
     const currentBalance = await replayService.getbalance();
     if (amount > currentBalance) {
       return res.status(400).json({error: "Insufficient balance" });
