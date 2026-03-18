@@ -7,3 +7,9 @@ This Project demonstrates the Event Sourcing Architecture pattern for a banking 
 Node.js
 Express.js
 MongoDB
+
+## Features
+~ Create Account
+~ Deposit Money
+~ Wihdraw Money
+~ Transfer Money
