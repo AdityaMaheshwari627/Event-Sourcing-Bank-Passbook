@@ -9,10 +9,10 @@ Express.js
 MongoDB
 
 ## Features
-~ Create Account
-~ Deposit Money
-~ Wihdraw Money
-~ Transfer Money
+# Create Account
+# Deposit Money
+# Wihdraw Money
+# Transfer Money
 
 ## API 
 Create, Deposit, Withdraw
