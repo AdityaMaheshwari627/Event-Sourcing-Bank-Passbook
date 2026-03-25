@@ -1,7 +1,7 @@
 # Event Sourcing Bank Passbook
 
 ## Overview
-This Project implementsa  the Event Sourcing Architecture pattern for a banking passbook system. Instead of storing only current balance, all transactions are stored as events .
+This Project implements a  the Event Sourcing Architecture pattern for a banking passbook system. Instead of storing only current balance, all transactions are stored as events .
 
 ## TechStack
 Node.js, 
